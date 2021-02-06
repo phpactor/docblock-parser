@@ -74,21 +74,19 @@ final class Lexer
         );
 
         $tokens = [];
-        $prevChunk = null;
         foreach ($chunks as $chunk) {
             [ $value, $offset ] = $chunk;
             $tokens[] = new Token(
                 $offset,
-                $this->resolveType($value, $prevChunk),
+                $this->resolveType($value),
                 $value
             );
-            $prevChunk = $chunk;
         }
 
         return new Tokens($tokens);
     }
 
-    private function resolveType(string $value, ?array $prevChunk = null): string
+    private function resolveType(string $value): string
     {
         if (false !== strpos($value, '/*')) {
             return Token::T_PHPDOC_OPEN;

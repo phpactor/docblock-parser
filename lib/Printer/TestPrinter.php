@@ -14,6 +14,9 @@ final class TestPrinter implements Printer
      */
     private $out = [];
 
+    /**
+     * @var int
+     */
     private $indent = 0;
 
     public function print(Node $node): string
@@ -29,7 +32,7 @@ final class TestPrinter implements Printer
     }
 
     /**
-     * @param array|Element $element
+     * @param Element|Element[] $element
      */
     public function printElement($element): string
     {

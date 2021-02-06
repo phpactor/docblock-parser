@@ -9,7 +9,7 @@ use IteratorAggregate;
 use Phpactor\Docblock\Ast\Tag\ParameterTag;
 
 /**
- * @implements IteratorAggregate<ParameterNode>
+ * @implements IteratorAggregate<ParameterTag>
  */
 class ParameterList extends Node implements IteratorAggregate, Countable
 {
@@ -18,12 +18,12 @@ class ParameterList extends Node implements IteratorAggregate, Countable
     ];
 
     /**
-     * @var ParameterNode[]
+     * @var ParameterTag[]
      */
     public $list;
 
     /**
-     * @param ParameterNode[] $list
+     * @param ParameterTag[] $list
      */
     public function __construct(array $list)
     {
@@ -43,7 +43,7 @@ class ParameterList extends Node implements IteratorAggregate, Countable
     }
 
     /**
-     * @return ArrayIterator<int, ParameterNode>
+     * @return ArrayIterator<int, ParameterTag>
      */
     public function getIterator(): ArrayIterator
     {
