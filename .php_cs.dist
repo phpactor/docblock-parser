@@ -20,5 +20,6 @@ return PhpCsFixer\Config::create()
         'global_namespace_import' => true,
     ])
     ->setFinder($finder)
+    ->setRiskyAllowed(true)
 ;
 
