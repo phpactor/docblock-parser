@@ -2,8 +2,6 @@
 
 namespace Phpactor\Docblock\Tests\Benchmark;
 
-use Generator;
-
 /**
  * @Iterations(33)
  * @Revs(50)

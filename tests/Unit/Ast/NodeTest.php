@@ -77,7 +77,7 @@ class NodeTest extends NodeTestCase
         yield [ '@deprecated This is deprecated'];
         yield 'deprecated' => [
             '/** @deprecated This is deprecated */',
-            function (Docblock $block) {
+            function (Docblock $block): void {
                 self::assertTrue($block->hasTag(DeprecatedTag::class));
             }
         ];
@@ -125,25 +125,25 @@ class NodeTest extends NodeTestCase
     {
         yield 'docblock' => [
             <<<'EOT'
-/**
- * This is a docblock
- * With some text - 
- * and maybe some 
- * ```
- * Markdown
- * ```
- * @param This $should not be included
- */
-EOT
+                /**
+                 * This is a docblock
+                 * With some text - 
+                 * and maybe some 
+                 * ```
+                 * Markdown
+                 * ```
+                 * @param This $should not be included
+                 */
+                EOT
             , function (Docblock $docblock): void {
                 self::assertEquals(<<<'EOT'
-This is a docblock
-With some text - 
-and maybe some 
-```
-Markdown
-```
-EOT
+                    This is a docblock
+                    With some text - 
+                    and maybe some 
+                    ```
+                    Markdown
+                    ```
+                    EOT
 , $docblock->prose());
             }
         ];

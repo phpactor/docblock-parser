@@ -53,7 +53,7 @@ class LexerTest extends TestCase
                 [Token::T_PHPDOC_LEADING, ' * '],
                 [Token::T_LABEL, 'Multi'],
                 [Token::T_WHITESPACE, "\n"],
-                [Token::T_WHITESPACE, " "],
+                [Token::T_WHITESPACE, ' '],
                 [Token::T_PHPDOC_CLOSE, '*/'],
             ]
         ];
