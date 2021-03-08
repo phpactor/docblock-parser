@@ -4,6 +4,8 @@ namespace Phpactor\DocblockParser;
 
 use Phpactor\DocblockParser\Ast\Tag\DeprecatedTag;
 use Phpactor\DocblockParser\Ast\Docblock;
+use Phpactor\DocblockParser\Ast\Tag\ExtendsTag;
+use Phpactor\DocblockParser\Ast\Tag\ImplementsTag;
 use Phpactor\DocblockParser\Ast\Tag\MethodTag;
 use Phpactor\DocblockParser\Ast\Tag\MixinTag;
 use Phpactor\DocblockParser\Ast\ParameterList;
@@ -99,6 +101,12 @@ final class Parser
 
             case '@template':
                 return $this->parseTemplate();
+
+            case '@extends':
+                return $this->parseExtends();
+
+            case '@implements':
+                return $this->parseImplements();
         }
 
         return new UnknownTag($this->tokens->chomp());
@@ -442,5 +450,29 @@ final class Parser
         }
 
         return new TemplateTag($tag, $placeholder, $of, $type);
+    }
+
+    private function parseExtends(): ExtendsTag
+    {
+        $tag = $this->tokens->chomp(Token::T_TAG);
+        $type = null;
+
+        if ($this->tokens->if(Token::T_LABEL)) {
+            $type = $this->parseTypes();
+        }
+
+        return new ExtendsTag($tag, $type);
+    }
+
+    private function parseImplements(): ImplementsTag
+    {
+        $tag = $this->tokens->chomp(Token::T_TAG);
+        $type = null;
+
+        if ($this->tokens->if(Token::T_LABEL)) {
+            $type = $this->parseTypes();
+        }
+
+        return new ImplementsTag($tag, $type);
     }
 }
