@@ -12,6 +12,7 @@ use Phpactor\DocblockParser\Ast\Tag\PropertyTag;
 use Phpactor\DocblockParser\Ast\Tag\ReturnTag;
 use Phpactor\DocblockParser\Ast\TextNode;
 use Phpactor\DocblockParser\Ast\TypeList;
+use Phpactor\DocblockParser\Ast\Type\ArrayNode;
 use Phpactor\DocblockParser\Ast\Type\ClassNode;
 use Phpactor\DocblockParser\Ast\Node;
 use Phpactor\DocblockParser\Ast\Tag\ParamTag;
@@ -247,6 +248,9 @@ final class Parser
     {
         if (strtolower($type->value) === 'null') {
             return new NullNode($type);
+        }
+        if (strtolower($type->value) === 'array') {
+            return new ArrayNode();
         }
         if (in_array($type->value, self::SCALAR_TYPES)) {
             return new ScalarNode($type);
