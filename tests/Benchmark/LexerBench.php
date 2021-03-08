@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Benchmark;
+namespace Phpactor\DocblockParser\Tests\Benchmark;
 
 use Generator;
-use Phpactor\Docblock\Lexer;
+use Phpactor\DocblockParser\Lexer;
 
 class LexerBench
 {

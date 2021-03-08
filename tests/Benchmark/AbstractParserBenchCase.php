@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Benchmark;
+namespace Phpactor\DocblockParser\Tests\Benchmark;
 
 /**
  * @Iterations(33)

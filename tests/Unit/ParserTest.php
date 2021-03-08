@@ -1,14 +1,14 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Unit;
+namespace Phpactor\DocblockParser\Tests\Unit;
 
 use Generator;
 use PHPUnit\Framework\TestCase;
-use Phpactor\Docblock\Ast\Docblock;
-use Phpactor\Docblock\Ast\Node;
-use Phpactor\Docblock\Lexer;
-use Phpactor\Docblock\Parser;
-use Phpactor\Docblock\Ast\Token;
+use Phpactor\DocblockParser\Ast\Docblock;
+use Phpactor\DocblockParser\Ast\Node;
+use Phpactor\DocblockParser\Lexer;
+use Phpactor\DocblockParser\Parser;
+use Phpactor\DocblockParser\Ast\Token;
 
 class ParserTest extends TestCase
 {

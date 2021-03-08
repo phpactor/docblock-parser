@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpactor\Docblock;
+namespace Phpactor\DocblockParser;
 
-use Phpactor\Docblock\Ast\Node;
+use Phpactor\DocblockParser\Ast\Node;
 
 interface Printer
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Phpactor\Docblock\Ast\Tag;
+namespace Phpactor\DocblockParser\Ast\Tag;
 
-use Phpactor\Docblock\Ast\TagNode;
-use Phpactor\Docblock\Ast\TextNode;
-use Phpactor\Docblock\Ast\Token;
-use Phpactor\Docblock\Ast\TypeNode;
-use Phpactor\Docblock\Ast\VariableNode;
+use Phpactor\DocblockParser\Ast\TagNode;
+use Phpactor\DocblockParser\Ast\TextNode;
+use Phpactor\DocblockParser\Ast\Token;
+use Phpactor\DocblockParser\Ast\TypeNode;
+use Phpactor\DocblockParser\Ast\VariableNode;
 
 class ParamTag extends TagNode
 {

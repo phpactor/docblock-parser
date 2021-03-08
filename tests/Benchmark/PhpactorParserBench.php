@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Benchmark;
+namespace Phpactor\DocblockParser\Tests\Benchmark;
 
-use Phpactor\Docblock\Lexer;
-use Phpactor\Docblock\Parser;
+use Phpactor\DocblockParser\Lexer;
+use Phpactor\DocblockParser\Parser;
 
 class PhpactorParserBench extends AbstractParserBenchCase
 {

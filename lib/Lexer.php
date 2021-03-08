@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpactor\Docblock;
+namespace Phpactor\DocblockParser;
 
-use Phpactor\Docblock\Ast\Token;
-use Phpactor\Docblock\Ast\Tokens;
+use Phpactor\DocblockParser\Ast\Token;
+use Phpactor\DocblockParser\Ast\Tokens;
 
 final class Lexer
 {

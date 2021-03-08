@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpactor\Docblock\Ast;
+namespace Phpactor\DocblockParser\Ast;
 
 use ArrayIterator;
 use Iterator;

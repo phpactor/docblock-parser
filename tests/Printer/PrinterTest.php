@@ -1,12 +1,12 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Printer;
+namespace Phpactor\DocblockParser\Tests\Printer;
 
 use Generator;
 use PHPUnit\Framework\TestCase;
-use Phpactor\Docblock\Lexer;
-use Phpactor\Docblock\Parser;
-use Phpactor\Docblock\Printer\TestPrinter;
+use Phpactor\DocblockParser\Lexer;
+use Phpactor\DocblockParser\Parser;
+use Phpactor\DocblockParser\Printer\TestPrinter;
 
 class PrinterTest extends TestCase
 {

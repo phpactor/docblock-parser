@@ -1,36 +1,36 @@
 <?php
 
-namespace Phpactor\Docblock;
+namespace Phpactor\DocblockParser;
 
-use Phpactor\Docblock\Ast\Tag\DeprecatedTag;
-use Phpactor\Docblock\Ast\Docblock;
-use Phpactor\Docblock\Ast\Tag\MethodTag;
-use Phpactor\Docblock\Ast\Tag\MixinTag;
-use Phpactor\Docblock\Ast\ParameterList;
-use Phpactor\Docblock\Ast\Tag\ParameterTag;
-use Phpactor\Docblock\Ast\Tag\PropertyTag;
-use Phpactor\Docblock\Ast\Tag\ReturnTag;
-use Phpactor\Docblock\Ast\TextNode;
-use Phpactor\Docblock\Ast\TypeList;
-use Phpactor\Docblock\Ast\Type\ClassNode;
-use Phpactor\Docblock\Ast\Node;
-use Phpactor\Docblock\Ast\Tag\ParamTag;
-use Phpactor\Docblock\Ast\TagNode;
-use Phpactor\Docblock\Ast\TypeNode;
-use Phpactor\Docblock\Ast\Type\GenericNode;
-use Phpactor\Docblock\Ast\Type\ListNode;
-use Phpactor\Docblock\Ast\Type\NullNode;
-use Phpactor\Docblock\Ast\Type\NullableNode;
-use Phpactor\Docblock\Ast\Type\ScalarNode;
-use Phpactor\Docblock\Ast\Type\ThisNode;
-use Phpactor\Docblock\Ast\Type\UnionNode;
-use Phpactor\Docblock\Ast\UnknownTag;
-use Phpactor\Docblock\Ast\ValueNode;
-use Phpactor\Docblock\Ast\Value\NullValue;
-use Phpactor\Docblock\Ast\Tag\VarTag;
-use Phpactor\Docblock\Ast\VariableNode;
-use Phpactor\Docblock\Ast\Token;
-use Phpactor\Docblock\Ast\Tokens;
+use Phpactor\DocblockParser\Ast\Tag\DeprecatedTag;
+use Phpactor\DocblockParser\Ast\Docblock;
+use Phpactor\DocblockParser\Ast\Tag\MethodTag;
+use Phpactor\DocblockParser\Ast\Tag\MixinTag;
+use Phpactor\DocblockParser\Ast\ParameterList;
+use Phpactor\DocblockParser\Ast\Tag\ParameterTag;
+use Phpactor\DocblockParser\Ast\Tag\PropertyTag;
+use Phpactor\DocblockParser\Ast\Tag\ReturnTag;
+use Phpactor\DocblockParser\Ast\TextNode;
+use Phpactor\DocblockParser\Ast\TypeList;
+use Phpactor\DocblockParser\Ast\Type\ClassNode;
+use Phpactor\DocblockParser\Ast\Node;
+use Phpactor\DocblockParser\Ast\Tag\ParamTag;
+use Phpactor\DocblockParser\Ast\TagNode;
+use Phpactor\DocblockParser\Ast\TypeNode;
+use Phpactor\DocblockParser\Ast\Type\GenericNode;
+use Phpactor\DocblockParser\Ast\Type\ListNode;
+use Phpactor\DocblockParser\Ast\Type\NullNode;
+use Phpactor\DocblockParser\Ast\Type\NullableNode;
+use Phpactor\DocblockParser\Ast\Type\ScalarNode;
+use Phpactor\DocblockParser\Ast\Type\ThisNode;
+use Phpactor\DocblockParser\Ast\Type\UnionNode;
+use Phpactor\DocblockParser\Ast\UnknownTag;
+use Phpactor\DocblockParser\Ast\ValueNode;
+use Phpactor\DocblockParser\Ast\Value\NullValue;
+use Phpactor\DocblockParser\Ast\Tag\VarTag;
+use Phpactor\DocblockParser\Ast\VariableNode;
+use Phpactor\DocblockParser\Ast\Token;
+use Phpactor\DocblockParser\Ast\Tokens;
 
 final class Parser
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Unit\Ast;
+namespace Phpactor\DocblockParser\Tests\Unit\Ast;
 
 use Closure;
 use PHPUnit\Framework\TestCase;
-use Phpactor\Docblock\Ast\Element;
-use Phpactor\Docblock\Ast\Node;
-use Phpactor\Docblock\Lexer;
-use Phpactor\Docblock\Parser;
+use Phpactor\DocblockParser\Ast\Element;
+use Phpactor\DocblockParser\Ast\Node;
+use Phpactor\DocblockParser\Lexer;
+use Phpactor\DocblockParser\Parser;
 
 class NodeTestCase extends TestCase
 {

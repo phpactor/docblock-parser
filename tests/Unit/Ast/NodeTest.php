@@ -1,18 +1,18 @@
 <?php
 
-namespace Phpactor\Docblock\Tests\Unit\Ast;
+namespace Phpactor\DocblockParser\Tests\Unit\Ast;
 
 use Generator;
-use Phpactor\Docblock\Ast\Docblock;
-use Phpactor\Docblock\Ast\Tag\DeprecatedTag;
-use Phpactor\Docblock\Ast\Tag\MethodTag;
-use Phpactor\Docblock\Ast\Tag\PropertyTag;
-use Phpactor\Docblock\Ast\Tag\ReturnTag;
-use Phpactor\Docblock\Ast\Type\ClassNode;
-use Phpactor\Docblock\Ast\Type\GenericNode;
-use Phpactor\Docblock\Ast\Type\ListNode;
-use Phpactor\Docblock\Ast\Type\ScalarNode;
-use Phpactor\Docblock\Ast\Type\UnionNode;
+use Phpactor\DocblockParser\Ast\Docblock;
+use Phpactor\DocblockParser\Ast\Tag\DeprecatedTag;
+use Phpactor\DocblockParser\Ast\Tag\MethodTag;
+use Phpactor\DocblockParser\Ast\Tag\PropertyTag;
+use Phpactor\DocblockParser\Ast\Tag\ReturnTag;
+use Phpactor\DocblockParser\Ast\Type\ClassNode;
+use Phpactor\DocblockParser\Ast\Type\GenericNode;
+use Phpactor\DocblockParser\Ast\Type\ListNode;
+use Phpactor\DocblockParser\Ast\Type\ScalarNode;
+use Phpactor\DocblockParser\Ast\Type\UnionNode;
 use Prophecy\Doubler\Generator\Node\MethodNode;
 
 class NodeTest extends NodeTestCase

@@ -1,11 +1,11 @@
 <?php
 
-namespace Phpactor\Docblock\Printer;
+namespace Phpactor\DocblockParser\Printer;
 
-use Phpactor\Docblock\Ast\Element;
-use Phpactor\Docblock\Ast\Node;
-use Phpactor\Docblock\Printer;
-use Phpactor\Docblock\Ast\Token;
+use Phpactor\DocblockParser\Ast\Element;
+use Phpactor\DocblockParser\Ast\Node;
+use Phpactor\DocblockParser\Printer;
+use Phpactor\DocblockParser\Ast\Token;
 
 final class TestPrinter implements Printer
 {

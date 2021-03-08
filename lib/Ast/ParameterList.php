@@ -1,12 +1,12 @@
 <?php
 
-namespace Phpactor\Docblock\Ast;
+namespace Phpactor\DocblockParser\Ast;
 
 use ArrayIterator;
 use Countable;
 use Generator;
 use IteratorAggregate;
-use Phpactor\Docblock\Ast\Tag\ParameterTag;
+use Phpactor\DocblockParser\Ast\Tag\ParameterTag;
 
 /**
  * @implements IteratorAggregate<ParameterTag>

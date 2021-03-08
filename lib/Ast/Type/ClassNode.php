@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpactor\Docblock\Ast\Type;
+namespace Phpactor\DocblockParser\Ast\Type;
 
-use Phpactor\Docblock\Ast\TypeNode;
-use Phpactor\Docblock\Ast\Token;
+use Phpactor\DocblockParser\Ast\TypeNode;
+use Phpactor\DocblockParser\Ast\Token;
 
 class ClassNode extends TypeNode
 {

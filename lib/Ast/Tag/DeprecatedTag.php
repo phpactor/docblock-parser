@@ -1,10 +1,10 @@
 <?php
 
-namespace Phpactor\Docblock\Ast\Tag;
+namespace Phpactor\DocblockParser\Ast\Tag;
 
-use Phpactor\Docblock\Ast\TagNode;
-use Phpactor\Docblock\Ast\TextNode;
-use Phpactor\Docblock\Ast\Token;
+use Phpactor\DocblockParser\Ast\TagNode;
+use Phpactor\DocblockParser\Ast\TextNode;
+use Phpactor\DocblockParser\Ast\Token;
 
 class DeprecatedTag extends TagNode
 {
