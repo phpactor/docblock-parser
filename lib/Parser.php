@@ -10,6 +10,7 @@ use Phpactor\DocblockParser\Ast\ParameterList;
 use Phpactor\DocblockParser\Ast\Tag\ParameterTag;
 use Phpactor\DocblockParser\Ast\Tag\PropertyTag;
 use Phpactor\DocblockParser\Ast\Tag\ReturnTag;
+use Phpactor\DocblockParser\Ast\Tag\TemplateTag;
 use Phpactor\DocblockParser\Ast\TextNode;
 use Phpactor\DocblockParser\Ast\TypeList;
 use Phpactor\DocblockParser\Ast\Type\ArrayNode;
@@ -95,6 +96,9 @@ final class Parser
 
             case '@return':
                 return $this->parseReturn();
+
+            case '@template':
+                return $this->parseTemplate();
         }
 
         return new UnknownTag($this->tokens->chomp());
@@ -413,5 +417,30 @@ final class Parser
         }
 
         return null;
+    }
+
+    private function parseTemplate(): TemplateTag
+    {
+        $tag = $this->tokens->chomp(Token::T_TAG);
+        $placeholder = null;
+        $of = null;
+        $type = null;
+
+        if ($this->tokens->if(Token::T_LABEL)) {
+            $placeholder = $this->tokens->chomp();
+        }
+
+        if ($this->tokens->if(Token::T_LABEL)) {
+            $of = $this->tokens->chomp();
+            if ($of->value === 'of') {
+                if ($this->tokens->if(Token::T_LABEL)) {
+                    $type = $this->parseTypes();
+                }
+            } else {
+                $of = null;
+            }
+        }
+
+        return new TemplateTag($tag, $placeholder, $of, $type);
     }
 }
