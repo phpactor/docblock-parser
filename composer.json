@@ -1,5 +1,5 @@
 {
-    "name": "phpactor/docblock",
+    "name": "phpactor/docblock-parser",
     "type": "library",
     "description": "Simple Docblock Parser",
     "license": "MIT",
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Phpactor\\Docblock\\": "lib/"
+            "Phpactor\\DocblockParser\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Phpactor\\Docblock\\Tests\\": "tests/"
+            "Phpactor\\DocblockParser\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
