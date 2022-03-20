@@ -35,7 +35,7 @@ class CallableNode extends TypeNode
         ?TypeList $parameters,
         ?Token $close,
         ?Token $colon,
-        ?TypeNode $type,
+        ?TypeNode $type
     ) {
         $this->name = $name;
         $this->open = $open;
