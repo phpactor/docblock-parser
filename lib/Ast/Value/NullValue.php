@@ -7,10 +7,8 @@ use Phpactor\DocblockParser\Ast\Token;
 
 class NullValue extends ValueNode
 {
-    /**
-     * @var Token
-     */
-    private $null;
+    
+    private Token $null;
 
     public function __construct(Token $null)
     {
@@ -22,9 +20,7 @@ class NullValue extends ValueNode
         return $this->null;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    
     public function value()
     {
         return null;

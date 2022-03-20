@@ -50,10 +50,8 @@ final class Lexer
         '\s+',
     ];
 
-    /**
-     * @var string
-     */
-    private $pattern;
+    
+    private string $pattern;
 
     public function __construct()
     {

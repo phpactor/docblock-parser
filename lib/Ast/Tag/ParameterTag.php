@@ -15,20 +15,14 @@ class ParameterTag extends TagNode
         'default',
     ];
 
-    /**
-     * @var TypeNode|null
-     */
-    public $type;
+    
+    public ?TypeNode $type;
 
-    /**
-     * @var VariableNode|null
-     */
-    public $name;
+    
+    public ?VariableNode $name;
 
-    /**
-     * @var ValueNode|null
-     */
-    public $default;
+    
+    public ?ValueNode $default;
 
     public function __construct(?TypeNode $type, ?VariableNode $name, ?ValueNode $default)
     {

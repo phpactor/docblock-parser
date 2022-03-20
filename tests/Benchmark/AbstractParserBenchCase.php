@@ -11,6 +11,7 @@ namespace Phpactor\DocblockParser\Tests\Benchmark;
 abstract class AbstractParserBenchCase
 {
     abstract public function setUp(): void;
+
     public function benchParse(): void
     {
         $doc = <<<'EOT'
@@ -31,5 +32,6 @@ abstract class AbstractParserBenchCase
     {
         $this->parse(file_get_contents(__DIR__ . '/examples/assert.example'));
     }
+
     abstract public function parse(string $doc): void;
 }

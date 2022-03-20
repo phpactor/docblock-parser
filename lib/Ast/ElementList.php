@@ -19,7 +19,7 @@ class ElementList extends Node implements IteratorAggregate
     /**
      * @var T[]
      */
-    public $elements;
+    public array $elements;
 
     /**
      * @param T[] $elements

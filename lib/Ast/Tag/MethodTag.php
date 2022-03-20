@@ -21,45 +21,29 @@ class MethodTag extends TagNode
         'text'
     ];
 
-    /**
-     * @var TypeNode|null
-     */
-    public $type;
+    
+    public ?TypeNode $type;
 
-    /**
-     * @var Token|null
-     */
-    public $name;
+    
+    public ?Token $name;
 
-    /**
-     * @var Token|null
-     */
-    public $static;
+    
+    public ?Token $static;
 
-    /**
-     * @var ParameterList|null
-     */
-    public $parameters;
+    
+    public ?ParameterList $parameters;
 
-    /**
-     * @var TextNode|null
-     */
-    public $text;
+    
+    public ?TextNode $text;
 
-    /**
-     * @var Token|null
-     */
-    public $parenOpen;
+    
+    public ?Token $parenOpen;
 
-    /**
-     * @var Token|null
-     */
-    public $parenClose;
+    
+    public ?Token $parenClose;
 
-    /**
-     * @var Token|null
-     */
-    public $tag;
+    
+    public ?Token $tag;
 
     public function __construct(
         ?Token $tag,

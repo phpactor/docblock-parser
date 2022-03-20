@@ -10,14 +10,11 @@ use PHPStan\PhpDocParser\Parser\TypeParser;
 
 class PhpstanParserBench extends AbstractParserBenchCase
 {
-    /**
-     * @var PhpDocParser
-     */
-    private $parser;
-    /**
-     * @var Lexer
-     */
-    private $lexer;
+    
+    private PhpDocParser $parser;
+
+    
+    private Lexer $lexer;
 
     public function setUp(): void
     {

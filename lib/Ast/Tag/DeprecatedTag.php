@@ -13,15 +13,11 @@ class DeprecatedTag extends TagNode
         'text',
     ];
 
-    /**
-     * @var TextNode
-     */
-    public $text;
+    
+    public TextNode $text;
 
-    /**
-     * @var Token
-     */
-    public $token;
+    
+    public Token $token;
 
     public function __construct(Token $token, ?TextNode $text)
     {

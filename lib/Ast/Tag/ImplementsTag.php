@@ -13,14 +13,11 @@ class ImplementsTag extends TagNode
         'type',
     ];
 
-    /**
-     * @var Token
-     */
-    public $tag;
-    /**
-     * @var TypeNode
-     */
-    public $type;
+    
+    public Token $tag;
+
+    
+    public TypeNode $type;
 
     public function __construct(Token $tag, ?TypeNode $type = null)
     {

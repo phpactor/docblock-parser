@@ -12,12 +12,10 @@ final class TestPrinter implements Printer
     /**
      * @var string[]
      */
-    private $out = [];
+    private array $out = [];
 
-    /**
-     * @var int
-     */
-    private $indent = 0;
+    
+    private int $indent = 0;
 
     public function print(Node $node): string
     {

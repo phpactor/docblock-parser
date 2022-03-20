@@ -11,10 +11,8 @@ class UnionNode extends TypeNode
         'types',
     ];
 
-    /**
-     * @var TypeList
-     */
-    public $types;
+    
+    public TypeList $types;
 
     public function __construct(TypeList $types)
     {

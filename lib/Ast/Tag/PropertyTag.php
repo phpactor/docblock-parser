@@ -14,20 +14,14 @@ class PropertyTag extends TagNode
         'name',
     ];
 
-    /**
-     * @var TypeNode|null
-     */
-    public $type;
+    
+    public ?TypeNode $type;
 
-    /**
-     * @var Token|null
-     */
-    public $name;
+    
+    public ?Token $name;
 
-    /**
-     * @var Token
-     */
-    public $tag;
+    
+    public Token $tag;
 
     public function __construct(Token $tag, ?TypeNode $type, ?Token $name)
     {

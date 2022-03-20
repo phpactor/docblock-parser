@@ -20,7 +20,7 @@ class ParameterList extends Node implements IteratorAggregate, Countable
     /**
      * @var ParameterTag[]
      */
-    public $list;
+    public array $list;
 
     /**
      * @param ParameterTag[] $list
@@ -50,9 +50,7 @@ class ParameterList extends Node implements IteratorAggregate, Countable
         return new ArrayIterator($this->list);
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    
     public function count()
     {
         return count($this->list);

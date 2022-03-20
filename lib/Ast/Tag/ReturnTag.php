@@ -15,20 +15,14 @@ class ReturnTag extends TagNode
         'text',
     ];
 
-    /**
-     * @var TypeNode|null
-     */
-    public $type;
+    
+    public ?TypeNode $type;
 
-    /**
-     * @var TextNode|null
-     */
-    public $text;
+    
+    public ?TextNode $text;
 
-    /**
-     * @var Token
-     */
-    public $tag;
+    
+    public Token $tag;
 
     public function __construct(Token $tag, ?TypeNode $type, ?TextNode $text = null)
     {

@@ -11,7 +11,7 @@ class TextNode extends Node
     /**
      * @var Token[]
      */
-    public $tokens;
+    public array $tokens;
 
     /**
      * @param Token[] $tokens

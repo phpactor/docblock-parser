@@ -12,15 +12,11 @@ class ListNode extends TypeNode
         'listChars',
     ];
 
-    /**
-     * @var TypeNode
-     */
-    public $type;
+    
+    public TypeNode $type;
 
-    /**
-     * @var Token
-     */
-    public $listChars;
+    
+    public Token $listChars;
 
     public function __construct(TypeNode $type, Token $listChars)
     {

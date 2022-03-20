@@ -12,15 +12,11 @@ class NullableNode extends TypeNode
         'type',
     ];
 
-    /**
-     * @var Token
-     */
-    public $nullable;
+    
+    public Token $nullable;
 
-    /**
-     * @var TypeNode
-     */
-    public $type;
+    
+    public TypeNode $type;
 
     public function __construct(Token $nullable, TypeNode $type)
     {

@@ -45,10 +45,8 @@ final class Parser
         'int', 'float', 'bool', 'string', 'mixed', 'callable',
     ];
 
-    /**
-     * @var Tokens
-     */
-    private $tokens;
+    
+    private Tokens $tokens;
 
     public function parse(Tokens $tokens): Node
     {

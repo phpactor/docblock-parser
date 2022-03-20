@@ -11,10 +11,8 @@ class ScalarNode extends TypeNode
         'name',
     ];
 
-    /**
-     * @var Token
-     */
-    public $name;
+    
+    public Token $name;
 
     public function __construct(Token $name)
     {

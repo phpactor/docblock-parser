@@ -4,10 +4,8 @@ namespace Phpactor\DocblockParser\Ast;
 
 class UnknownTag extends TagNode
 {
-    /**
-     * @var Token
-     */
-    private $name;
+    
+    private Token $name;
 
     public function __construct(Token $name)
     {

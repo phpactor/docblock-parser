@@ -13,7 +13,7 @@ class Docblock extends Node
     /**
      * @var ElementList<Element>
      */
-    public $children;
+    public ElementList $children;
 
     /**
      * @param Element[] $children

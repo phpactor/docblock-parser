@@ -20,7 +20,7 @@ class TypeList extends Node implements IteratorAggregate, Countable
     /**
      * @var array<T>
      */
-    public $list;
+    public array $list;
 
     /**
      * @param array<T> $list
@@ -38,9 +38,7 @@ class TypeList extends Node implements IteratorAggregate, Countable
         return new ArrayIterator($this->list);
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    
     public function count()
     {
         return count($this->list);
