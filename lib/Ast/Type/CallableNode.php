@@ -2,11 +2,9 @@
 
 namespace Phpactor\DocblockParser\Ast\Type;
 
-use Phpactor\DocblockParser\Ast\ParameterList;
 use Phpactor\DocblockParser\Ast\TypeList;
 use Phpactor\DocblockParser\Ast\TypeNode;
 use Phpactor\DocblockParser\Ast\Token;
-use Phpactor\DocblockParser\Ast\TypeNodes;
 
 class CallableNode extends TypeNode
 {
@@ -27,7 +25,7 @@ class CallableNode extends TypeNode
 
     public ?Token $close;
 
-    public Token $colon;
+    public ?Token $colon;
 
     public ?TypeNode $type;
 
@@ -38,8 +36,7 @@ class CallableNode extends TypeNode
         ?Token $close,
         ?Token $colon,
         ?TypeNode $type,
-    )
-    {
+    ) {
         $this->name = $name;
         $this->open = $open;
         $this->parameters = $parameters;

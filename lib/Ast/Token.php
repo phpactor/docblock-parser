@@ -49,13 +49,10 @@ final class Token implements Element
     public const T_PAREN_CLOSE = 'PAREN_CLOSE';
 
     public const T_INVALID = 'INVALID';
-
     
     public int $byteOffset;
-
     
     public string $type;
-
     
     public string $value;
 
@@ -70,13 +67,11 @@ final class Token implements Element
     {
         return $this->value;
     }
-
     
     public function start(): int
     {
         return $this->byteOffset;
     }
-
     
     public function end(): int
     {

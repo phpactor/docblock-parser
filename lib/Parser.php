@@ -230,7 +230,7 @@ final class Parser
 
         $isList = false;
 
-        if ($type->toString() === 'callable' && $this->tokens->current->type === Token::T_PAREN_OPEN) {
+        if ($this->tokens->current->type === Token::T_PAREN_OPEN) {
             $open = $this->tokens->chomp();
 
             $typeList = null;

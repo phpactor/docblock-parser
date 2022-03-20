@@ -6,6 +6,6 @@ Docblock: =
  ElementList: = /**
  * 
   VarTag: = @var
-   CallableNode: = callable()
+   CallableNode: = callable():
     ScalarNode: = string
  */
