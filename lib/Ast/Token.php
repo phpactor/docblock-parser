@@ -22,6 +22,8 @@ final class Token implements Element
 
     public const T_EQUALS = 'EQUALS';
 
+    public const T_COLON = 'COLON';
+
     public const T_COMMA = 'COMMA';
 
     public const T_LIST = 'LIST';

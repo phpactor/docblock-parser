@@ -42,6 +42,7 @@ final class Lexer
         '?' => Token::T_NULLABLE,
         '|' => Token::T_BAR,
         '=' => Token::T_EQUALS,
+        ':' => Token::T_COLON,
     ];
 
     /**

@@ -48,7 +48,7 @@ class PrinterTest extends TestCase
     public function provideExamples(): Generator
     {
         foreach ((array)glob(__DIR__ . '/examples/*.test') as $path) {
-            yield [
+            yield basename($path) => [
                 $path
             ];
         }

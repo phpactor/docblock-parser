@@ -6,6 +6,7 @@ use Phpactor\DocblockParser\Ast\ParameterList;
 use Phpactor\DocblockParser\Ast\TypeList;
 use Phpactor\DocblockParser\Ast\TypeNode;
 use Phpactor\DocblockParser\Ast\Token;
+use Phpactor\DocblockParser\Ast\TypeNodes;
 
 class CallableNode extends TypeNode
 {
@@ -14,6 +15,7 @@ class CallableNode extends TypeNode
         'open',
         'parameters',
         'close',
+        'colon',
         'type'
     ];
 
@@ -25,6 +27,8 @@ class CallableNode extends TypeNode
 
     public ?Token $close;
 
+    public Token $colon;
+
     public ?TypeNode $type;
 
     public function __construct(
@@ -32,6 +36,7 @@ class CallableNode extends TypeNode
         ?Token $open,
         ?TypeList $parameters,
         ?Token $close,
+        ?Token $colon,
         ?TypeNode $type,
     )
     {
@@ -40,5 +45,6 @@ class CallableNode extends TypeNode
         $this->parameters = $parameters;
         $this->close = $close;
         $this->type = $type;
+        $this->colon = $colon;
     }
 }

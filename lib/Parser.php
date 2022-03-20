@@ -237,10 +237,16 @@ final class Parser
             if ($this->tokens->if(Token::T_LABEL)) {
                 $typeList = $this->parseTypeList();
             }
+
             $close = $this->tokens->chomp();
             $returnType = null;
-            if ($this->tokens->if(Token::T_LABEL)) {
-                $returnType = $this->parseTypes();
+            $colon = null;
+
+            if ($this->tokens->if(Token::T_COLON)) {
+                $colon = $this->tokens->chomp();
+                if ($this->tokens->if(Token::T_LABEL)) {
+                    $returnType = $this->parseTypes();
+                }
             }
 
             return new CallableNode(
@@ -248,6 +254,7 @@ final class Parser
                 $open,
                 $typeList,
                 $close,
+                $colon,
                 $returnType,
             );
         }

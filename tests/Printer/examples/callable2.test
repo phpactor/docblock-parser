@@ -9,5 +9,6 @@ Docblock: =
    CallableNode: = callable(
     TypeList: = 
      ScalarNode: = string,
-     ScalarNode: = bool): string
+     ScalarNode: = bool):
+    ScalarNode: = string
  */
