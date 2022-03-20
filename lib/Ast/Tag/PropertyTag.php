@@ -13,13 +13,10 @@ class PropertyTag extends TagNode
         'type',
         'name',
     ];
-
     
     public ?TypeNode $type;
-
     
     public ?Token $name;
-
     
     public Token $tag;
 
@@ -28,5 +25,14 @@ class PropertyTag extends TagNode
         $this->type = $type;
         $this->name = $name;
         $this->tag = $tag;
+    }
+
+    public function propertyName(): ?string
+    {
+        if (null === $this->name) {
+            return null;
+        }
+
+        return $this->name->toString();
     }
 }

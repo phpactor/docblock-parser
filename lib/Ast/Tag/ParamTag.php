@@ -26,10 +26,8 @@ class ParamTag extends TagNode
      * @var ?VariableNode
      */
     public $variable;
-
     
     public ?TextNode $text;
-
     
     public Token $tag;
 
@@ -39,6 +37,15 @@ class ParamTag extends TagNode
         $this->variable = $variable;
         $this->text = $text;
         $this->tag = $tag;
+    }
+
+    public function paramName(): ?string
+    {
+        if (null === $this->variable) {
+            return null;
+        }
+
+        return $this->variable->name()->toString();
     }
 
     public function type(): ?TypeNode

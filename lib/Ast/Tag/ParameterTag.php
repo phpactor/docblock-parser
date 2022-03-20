@@ -14,13 +14,10 @@ class ParameterTag extends TagNode
         'name',
         'default',
     ];
-
     
     public ?TypeNode $type;
-
     
     public ?VariableNode $name;
-
     
     public ?ValueNode $default;
 
@@ -31,9 +28,13 @@ class ParameterTag extends TagNode
         $this->default = $default;
     }
 
-    public function name(): ?VariableNode
+    public function parameterName(): ?string
     {
-        return $this->name;
+        if (null === $this->name) {
+            return null;
+        }
+
+        return $this->name->name()->toString();
     }
 
     public function type(): ?TypeNode

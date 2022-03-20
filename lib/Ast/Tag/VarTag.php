@@ -24,7 +24,6 @@ class VarTag extends TagNode
      * @var ?VariableNode
      */
     public $variable;
-
     
     public Token $tag;
 
@@ -43,5 +42,14 @@ class VarTag extends TagNode
     public function variable(): ?VariableNode
     {
         return $this->variable;
+    }
+
+    public function name(): ?string
+    {
+        if (null === $this->variable) {
+            return null;
+        }
+
+        return $this->variable->name()->toString();
     }
 }

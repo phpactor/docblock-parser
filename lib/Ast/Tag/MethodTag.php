@@ -20,28 +20,20 @@ class MethodTag extends TagNode
         'parenClose',
         'text'
     ];
-
     
     public ?TypeNode $type;
-
     
     public ?Token $name;
-
     
     public ?Token $static;
-
     
     public ?ParameterList $parameters;
-
     
     public ?TextNode $text;
-
     
     public ?Token $parenOpen;
-
     
     public ?Token $parenClose;
-
     
     public ?Token $tag;
 
@@ -63,5 +55,14 @@ class MethodTag extends TagNode
         $this->parenOpen = $parenOpen;
         $this->parenClose = $parenClose;
         $this->tag = $tag;
+    }
+
+    public function methodName(): ?string
+    {
+        if (null === $this->name) {
+            return null;
+        }
+
+        return $this->name->toString();
     }
 }
