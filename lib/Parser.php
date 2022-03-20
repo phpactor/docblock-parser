@@ -16,6 +16,7 @@ use Phpactor\DocblockParser\Ast\Tag\TemplateTag;
 use Phpactor\DocblockParser\Ast\TextNode;
 use Phpactor\DocblockParser\Ast\TypeList;
 use Phpactor\DocblockParser\Ast\Type\ArrayNode;
+use Phpactor\DocblockParser\Ast\Type\CallableNode;
 use Phpactor\DocblockParser\Ast\Type\ClassNode;
 use Phpactor\DocblockParser\Ast\Node;
 use Phpactor\DocblockParser\Ast\Tag\ParamTag;
@@ -228,6 +229,28 @@ final class Parser
         }
 
         $isList = false;
+
+        if ($type->toString() === 'callable' && $this->tokens->current->type === Token::T_PAREN_OPEN) {
+            $open = $this->tokens->chomp();
+
+            $typeList = null;
+            if ($this->tokens->if(Token::T_LABEL)) {
+                $typeList = $this->parseTypeList();
+            }
+            $close = $this->tokens->chomp();
+            $returnType = null;
+            if ($this->tokens->if(Token::T_LABEL)) {
+                $returnType = $this->parseTypes();
+            }
+
+            return new CallableNode(
+                $type,
+                $open,
+                $typeList,
+                $close,
+                $returnType,
+            );
+        }
 
         if ($this->tokens->current->type === Token::T_LIST) {
             $list = $this->tokens->chomp();
