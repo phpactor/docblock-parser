@@ -1,7 +1,7 @@
 {
     "name": "phpactor/docblock-parser",
     "type": "library",
-    "description": "Simple Docblock Parser",
+    "description": "Docblock Parser",
     "license": "MIT",
     "authors": [
         {

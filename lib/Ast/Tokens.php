@@ -6,6 +6,9 @@ use ArrayIterator;
 use IteratorAggregate;
 use RuntimeException;
 
+/**
+ * @implements IteratorAggregate<int, Token>
+ */
 final class Tokens implements IteratorAggregate
 {
     /**

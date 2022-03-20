@@ -11,7 +11,7 @@ class Docblock extends Node
     ];
 
     /**
-     * @var ElementList
+     * @var ElementList<Element>
      */
     public $children;
 
@@ -38,9 +38,9 @@ class Docblock extends Node
     }
 
     /**
-     * @template T
+     * @template T of TagNode
      * @param class-string<T>|null $tagFqn
-     * @return Generator<T>
+     * @return Generator<T|TagNode>
      */
     public function tags(?string $tagFqn = null): Generator
     {

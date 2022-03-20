@@ -2,6 +2,7 @@
 
 namespace Phpactor\DocblockParser\Ast\Type;
 
+use Phpactor\DocblockParser\Ast\Element;
 use Phpactor\DocblockParser\Ast\TypeList;
 use Phpactor\DocblockParser\Ast\TypeNode;
 use Phpactor\DocblockParser\Ast\Token;
@@ -25,7 +26,7 @@ class GenericNode extends TypeNode
     public $close;
 
     /**
-     * @var TypeList
+     * @var TypeList<Element>
      */
     public $parameters;
 
@@ -34,6 +35,9 @@ class GenericNode extends TypeNode
      */
     public $type;
 
+    /**
+     * @param TypeList<Element> $parameters
+     */
     public function __construct(Token $open, TypeNode $type, TypeList $parameters, Token $close)
     {
         $this->open = $open;
@@ -52,6 +56,9 @@ class GenericNode extends TypeNode
         return $this->open;
     }
 
+    /**
+     * @return TypeList<Element>
+     */
     public function parameters(): TypeList
     {
         return $this->parameters;

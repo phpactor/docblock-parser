@@ -3,6 +3,7 @@
 namespace Phpactor\DocblockParser\Ast;
 
 use Generator;
+use Traversable;
 
 abstract class Node implements Element
 {
@@ -80,6 +81,7 @@ abstract class Node implements Element
     public function firstDescendant(string $elementFqn): ?Element
     {
         foreach ($this->descendantElements($elementFqn) as $element) {
+            /** @phpstan-ignore-next-line */
             return $element;
         }
 
@@ -178,7 +180,7 @@ abstract class Node implements Element
                 return $this->endOf(array_reverse($element));
             }
 
-            if (is_iterable($element)) {
+            if ($element instanceof Traversable) {
                 return $this->endOf(array_reverse(iterator_to_array($element)));
             }
 
