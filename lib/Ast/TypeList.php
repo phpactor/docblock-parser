@@ -5,11 +5,9 @@ namespace Phpactor\DocblockParser\Ast;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
-use RuntimeException;
 
 /**
- * @template T of Element
- * @implements IteratorAggregate<int,T>
+ * @implements IteratorAggregate<int,Token|Element>
  */
 class TypeList extends Node implements IteratorAggregate, Countable
 {
@@ -18,12 +16,12 @@ class TypeList extends Node implements IteratorAggregate, Countable
     ];
 
     /**
-     * @var array<T>
+     * @var array<Token|TypeNode>
      */
     public array $list;
 
     /**
-     * @param array<T> $list
+     * @param array<Token|TypeNode> $list
      */
     public function __construct(array $list)
     {
@@ -31,39 +29,22 @@ class TypeList extends Node implements IteratorAggregate, Countable
     }
 
     /**
-     * @return ArrayIterator<int, T>
+     * @return ArrayIterator<int, Token|TypeNode>
      */
     public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->list);
     }
-
     
     public function count()
     {
         return count($this->list);
     }
 
-    /**
-     * @return T
-     */
-    public function first(): Element
+    
+    public function types(): TypeNodes
     {
-        if (!isset($this->list[0])) {
-            throw new RuntimeException(sprintf(
-                'List has no first element'
-            ));
-        }
-
-        return $this->list[0];
-    }
-
-    /**
-     * @return TypeList<TypeNode&T>
-     */
-    public function types(): self
-    {
-        return new self(array_filter($this->list, function (Element $element) {
+        return new TypeNodes(...array_filter($this->list, function (Element $element) {
             return $element instanceof TypeNode;
         }));
     }

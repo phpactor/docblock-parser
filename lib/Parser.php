@@ -44,7 +44,6 @@ final class Parser
     private const SCALAR_TYPES = [
         'int', 'float', 'bool', 'string', 'mixed', 'callable',
     ];
-
     
     private Tokens $tokens;
 
@@ -202,11 +201,13 @@ final class Parser
             break;
         }
 
-        if (count($elements) === 1) {
-            return $elements[0];
+        $list = new TypeList($elements);
+
+        if (count($list->list) === 1) {
+            return $list->types()->first();
         }
 
-        return new UnionNode(new TypeList($elements));
+        return new UnionNode($list);
     }
 
     private function parseType(): ?TypeNode
@@ -243,6 +244,7 @@ final class Parser
                 return null;
             }
 
+            /** @phpstan-ignore-next-line */
             return new GenericNode(
                 $open,
                 $this->createTypeFromToken($type),
@@ -439,6 +441,7 @@ final class Parser
         if ($this->tokens->if(Token::T_LABEL)) {
             $of = $this->tokens->chomp();
             if ($of->value === 'of') {
+                /** @phpstan-ignore-next-line */
                 if ($this->tokens->if(Token::T_LABEL)) {
                     $type = $this->parseTypes();
                 }

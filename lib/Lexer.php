@@ -4,6 +4,7 @@ namespace Phpactor\DocblockParser;
 
 use Phpactor\DocblockParser\Ast\Token;
 use Phpactor\DocblockParser\Ast\Tokens;
+use RuntimeException;
 
 final class Lexer
 {
@@ -49,7 +50,6 @@ final class Lexer
     private const IGNORE_PATTERNS = [
         '\s+',
     ];
-
     
     private string $pattern;
 
@@ -64,15 +64,22 @@ final class Lexer
 
     public function lex(string $docblock): Tokens
     {
-        $chunks = (array)preg_split(
+        $chunks = preg_split(
             $this->pattern,
             $docblock,
-            null,
+            -1,
             PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_OFFSET_CAPTURE
         );
 
+        if (false === $chunks) {
+            throw new RuntimeException(
+                'Unexpected error from preg_split'
+            );
+        }
+
+
         $tokens = [];
-        foreach ($chunks as $chunk) {
+        foreach ((array)$chunks as $chunk) {
             [ $value, $offset ] = $chunk;
             $tokens[] = new Token(
                 $offset,

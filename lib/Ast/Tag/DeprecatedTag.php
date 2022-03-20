@@ -12,10 +12,8 @@ class DeprecatedTag extends TagNode
         'token',
         'text',
     ];
-
     
-    public TextNode $text;
-
+    public ?TextNode $text;
     
     public Token $token;
 

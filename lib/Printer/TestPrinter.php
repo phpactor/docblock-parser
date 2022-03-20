@@ -9,12 +9,6 @@ use Phpactor\DocblockParser\Ast\Token;
 
 final class TestPrinter implements Printer
 {
-    /**
-     * @var string[]
-     */
-    private array $out = [];
-
-    
     private int $indent = 0;
 
     public function print(Node $node): string

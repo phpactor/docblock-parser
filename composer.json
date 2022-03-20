@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "phpbench/phpbench": "dev-master",
+        "phpbench/phpbench": "^1.1",
         "ergebnis/composer-normalize": "^2.0",
-        "friendsofphp/php-cs-fixer": "^2.17",
-        "phpstan/phpstan": "~0.12.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.0",
         "phpunit/phpunit": "^9.0",
         "phpspec/prophecy-phpunit": "^2.0",
         "symfony/var-dumper": "^5.2",

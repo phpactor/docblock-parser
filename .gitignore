@@ -1,9 +1,10 @@
+/.php-cs-fixer.cache
+/.phpbench
 /vendor
 /tests/Workspace
 /tests/Assets/workspace
 /phpbench.json
 /composer.lock
-/.php_cs.cache
 /stubs
 .phpunit.result.cache
 /.vscode
