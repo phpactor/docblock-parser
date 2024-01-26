@@ -34,6 +34,7 @@ final class Lexer
         '[0-9]+\.[0-9]+',
         '[0-9]+',
     ];
+
     private const TOKEN_VALUE_MAP = [
         ']' => Token::T_BRACKET_SQUARE_CLOSE,
         '[' => Token::T_BRACKET_SQUARE_OPEN,

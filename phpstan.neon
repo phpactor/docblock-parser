@@ -1,5 +1,5 @@
 parameters:
     inferPrivatePropertyTypeFromConstructor: true
     paths:
-        - lib
+        - src
     level: '7'
