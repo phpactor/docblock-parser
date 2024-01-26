@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phpactor\\DocblockParser\\": "lib/"
+            "Phpactor\\DocblockParser\\": "src/"
         }
     },
     "autoload-dev": {
@@ -46,5 +46,10 @@
             "vendor/bin/php-cs-fixer fix --allow-risky=yes",
             "vendor/bin/phpstan analyse"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
     }
 }

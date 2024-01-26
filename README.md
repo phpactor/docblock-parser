@@ -11,15 +11,9 @@ PHP Docblock parser with the following aims:
 - Isomorphic: can be transformed back to the original text representation.
 - Positional: the positions of nodes are captured.
 
-Contributing
-------------
+Notice
+------
 
-This package is open source and welcomes contributions! Feel free to open a
-pull request on this repository.
-
-Support
--------
-
-- Create an issue on the main [Phpactor](https://github.com/phpactor/phpactor) repository.
-- Join the `#phpactor` channel on the Slack [Symfony Devs](https://symfony.com/slack-invite) channel.
-
+This package is not actively developed here but in the main
+[phpactor](https://github.com/phpactor/phpactor) repository. It is
+_occasionally_ updated. Raise any issues about this repository there.
