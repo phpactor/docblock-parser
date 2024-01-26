@@ -1,0 +1,11 @@
+/**
+ * @var string[]
+ */
+---
+Docblock: = 
+ ElementList: = /**
+ * 
+  VarTag: = @var
+   ListBracketsNode: = 
+    ScalarNode: = string[]
+ */

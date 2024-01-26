@@ -1,0 +1,12 @@
+/**
+ * @param Foobar $foobar
+ */
+---
+Docblock: = 
+ ElementList: = /**
+ * 
+  ParamTag: = @param
+   ClassNode: = Foobar
+   VariableNode: = $foobar
+   TextNode: = 
+ */

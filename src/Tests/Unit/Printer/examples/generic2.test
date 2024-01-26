@@ -1,0 +1,17 @@
+/**
+ * @param Foobar<Barfoo[],string> $foobar
+ */
+---
+Docblock: = 
+ ElementList: = /**
+ * 
+  ParamTag: = @param
+   GenericNode: = 
+    ClassNode: = Foobar<
+    TypeList: = 
+     ListBracketsNode: = 
+      ClassNode: = Barfoo[],
+     ScalarNode: = string>
+   VariableNode: = $foobar
+   TextNode: = 
+ */

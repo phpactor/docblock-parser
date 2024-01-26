@@ -1,0 +1,11 @@
+/**
+ * @param bool
+ */
+---
+Docblock: = 
+ ElementList: = /**
+ * 
+  ParamTag: = @param
+   ScalarNode: = bool
+   TextNode: = 
+ */

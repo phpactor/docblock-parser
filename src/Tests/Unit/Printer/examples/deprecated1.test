@@ -1,0 +1,10 @@
+/**
+ * @deprecated
+ */
+---
+Docblock: = 
+ ElementList: = /**
+ * 
+  DeprecatedTag: = @deprecated
+   TextNode: = 
+ */
